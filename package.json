@@ -31,7 +31,6 @@
     "typescript": "^4.9.4"
   },
   "lint-staged": {
-    "*.{ts,tsx,js,jsx}": "eslint --fix --ext .js,.jsx,.ts,.tsx --ignore-path .eslintignore --max-warnings 0",
-    "*.scss": "stylelint --fix"
+    "*.{ts,tsx,js,jsx}": "eslint --fix --ext .js,.jsx,.ts,.tsx --ignore-path .eslintignore --max-warnings 0"
   }
 }
