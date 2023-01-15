@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "check-ts": "tsc --noEmit",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint-staged": "lint-staged",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@next/font": "13.1.2",
@@ -22,6 +25,12 @@
   },
   "devDependencies": {
     "eslint-config-prettier": "^8.6.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
     "prettier": "^2.8.3"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": "eslint --fix --ext .js,.jsx,.ts,.tsx --ignore-path .eslintignore --max-warnings 0",
+    "*.scss": "stylelint --fix"
   }
 }
